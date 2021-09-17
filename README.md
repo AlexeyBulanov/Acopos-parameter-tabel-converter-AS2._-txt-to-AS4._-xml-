@@ -7,6 +7,10 @@ The program converts the ACOPOS parameter table in TXT format (~ AS 2.7) to XML 
 4. Take the tables in XML format from the "Result_xml" folder
 5. Import tables in XML format into the older version of AutomationStudio
 
+Authors:  
+Developer: Bulanov Alexey Alekseevich  
+Support: Salaev Amir Khalyg oglu :japanese_goblin:
+
 RU\
 Программа конвертирует ACOPOS parameter table формата TXT(~AS 2.7) в формат XML(~4._+)
 1. Экспортируем таблицы из AutomationStudio младшей версии в формате TXT
@@ -14,3 +18,7 @@ RU\
 3. Запускаем скрипт main.py
 4. Забираем таблицы в формате XML в папке "Result_xml"
 5. Импортируем таблицы в формате XML в AutomationStudio старшей версии
+
+Авторы:  
+Разработчик: Буланов Алексей Алексеевич   
+Поддержка: Салаев Амир Халыг оглы :japanese_goblin:
