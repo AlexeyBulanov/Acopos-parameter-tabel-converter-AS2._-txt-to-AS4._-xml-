@@ -1,66 +1,91 @@
-<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio FileVersion="4.9"?>
-<AcoposParameterTable>
-  <Root Name="Parameters">
-    <Group Name="SKA55HS17" Description="">
-      <Group Name="General parameters" Description="">
-        <Parameter ID="30" Name="Motor: Type" Value="0x0002" Unit="" Description=""/>
-        <Parameter ID="31" Name="Motor: Software compatibility" Value="0x0201" Unit="" Description=""/>
-        <Parameter ID="46" Name="Motor: Winding connection" Value="1" Unit="" Description=""/>
-        <Parameter ID="47" Name="Motor: Number of pole-pairs" Value="53" Unit="" Description=""/>
-      </Group>
-      <Group Name="Brake parameters" Description="">
-        <Parameter ID="42" Name="Motor holding brake: Rated current" Value="0" Unit="A" Description=""/>
-        <Parameter ID="43" Name="Motor holding brake: Rated torque" Value="0" Unit="Nm" Description=""/>
-        <Parameter ID="44" Name="Motor holding brake: Engaging delay" Value="0" Unit="s" Description=""/>
-        <Parameter ID="45" Name="Motor holding brake: Release delay" Value="0" Unit="s" Description=""/>
-      </Group>
-      <Group Name="Thermo sensor parameters" Description="">
-        <Parameter ID="64" Name="Temperature sensor: Parameter 1" Value="359" Unit="" Description=""/>
-        <Parameter ID="65" Name="Temperature sensor: Parameter 2" Value="1334" Unit="" Description=""/>
-        <Parameter ID="66" Name="Temperature sensor: Parameter 3" Value="-40" Unit="" Description=""/>
-        <Parameter ID="67" Name="Temperature sensor: Parameter 4" Value="0.07" Unit="" Description=""/>
-        <Parameter ID="68" Name="Temperature sensor: Parameter 5" Value="32.43" Unit="" Description=""/>
-        <Parameter ID="69" Name="Temperature sensor: Parameter 6" Value="60.71" Unit="" Description=""/>
-        <Parameter ID="70" Name="Temperature sensor: Parameter 7" Value="85.79" Unit="" Description=""/>
-        <Parameter ID="71" Name="Temperature sensor: Parameter 8" Value="108.73" Unit="" Description=""/>
-        <Parameter ID="72" Name="Temperature sensor: Parameter 9" Value="130.10" Unit="" Description=""/>
-        <Parameter ID="73" Name="Temperature sensor: Parameter 10" Value="150" Unit="" Description=""/>
-        <Parameter ID="75" Name="Motor: Thermal time constant (for MOTOR_COMPATIBILITY 0x0202)" Value="1800" Unit="s" Description=""/>
-      </Group>
-      <Group Name="Motor parameters" Description="">
-        <Parameter ID="48" Name="Motor: Rated voltage" Value="400" Unit="V" Description=""/>
-        <Parameter ID="49" Name="Motor: Voltage constant" Value="3164.32" Unit="mV*min" Description=""/>
-        <Parameter ID="50" Name="Motor: Rated speed" Value="88,48" Unit="1/min" Description=""/>
-        <Parameter ID="51" Name="Motor: Maximum speed" Value="90" Unit="1/min" Description=""/>
-        <Parameter ID="52" Name="Motor: Stall torque" Value="321" Unit="Nm" Description=""/>
-        <Parameter ID="53" Name="Motor: Rated torque" Value="300" Unit="Nm" Description=""/>
-        <Parameter ID="54" Name="Motor: Peak torque" Value="990" Unit="Nm" Description=""/>
-        <Parameter ID="55" Name="Motor: Torque constant" Value="50.5" Unit="Nm/A" Description=""/>
-        <Parameter ID="56" Name="Motor: Stall current" Value="6.39" Unit="A" Description=""/>
-        <Parameter ID="57" Name="Motor: Rated current" Value="6" Unit="A" Description=""/>
-        <Parameter ID="58" Name="Motor: Peak current" Value="25.56" Unit="A" Description=""/>
-        <Parameter ID="59" Name="Motor: Line cross section" Value="0" Unit="mm²" Description=""/>
-        <Parameter ID="60" Name="Motor: Stator resistance" Value="4.25" Unit="Ohm" Description=""/>
-        <Parameter ID="61" Name="Motor: Stator inductance" Value="0.0697" Unit="Henry" Description=""/>
-        <Parameter ID="62" Name="Motor: Moment of inertia" Value="1.86" Unit="kgm²" Description=""/>
-        <Parameter ID="63" Name="Motor: Commutation offset" Value="1e+006" Unit="rad" Description=""/>
-        <Parameter ID="849" Name="Motor: Thermal time constant" Value="1800" Unit="s" Description=""/>
-      </Group>
-      <Group Name="Isolation parameters" Description="">
-        <Parameter ID="74" Name="Motor: Limit temperature" Value="130" Unit="°C" Description=""/>
-      </Group>
-    </Group>
-    <Group Name="SS2" Description="8AC120.00">
-      <Parameter ID="97" Name="Encoder1: Type" Value="ncINC" Unit="" Description=""/>
-      <Parameter ID="109" Name="Encoder1: Encoder scaling: increments per encoder revolution" Value="1110949888" Unit="" Description=""/>
-    </Group>
-    <Group Name="Commutation" Description="">
-      <Parameter ID="276" Name="Motor: Phasing: Mode" Value="0" Unit="" Description=""/>
-    </Group>
-    <Group Name="Interpolation" Description="">
-      <Parameter ID="797" Name="Interpolation mode for cyclic external set value mode" Value="2" Unit="" Description=""/>
-      <Parameter ID="357" Name="Drive synchronisation: Master cycle time" Value="800" Unit="us" Description=""/>
-    </Group>
-  </Root>
-</AcoposParameterTable>
+PROJECT lasergal
+	PLC G-SPHERE
+		PROCESSOR CPU
+			PROGRAM g1_ax_t1 157 : (* ACOPOS Parameter Module *)
+				PARAM
+					Resource := 530
+					Group := 0
+					Compile_Options := 1
+					Changed := 1204808861
+					Make_Options := 0
+					Exc_Irq_Number := 0
+					Moduletype := 0
+					Mode := 0
+					Status := 0
+					Install_Number := 2
+					Description := "Galileo #1"
+					Version := 0
+					Revision := 0
+					TargetMemory := 2
+					Compiler_Options := 00 81 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+				END_PARAM
+				APM
+					<?xml version="1.0" encoding="utf-8"?>
+					<?AutomationStudio Version="2.5"?>
+					<AcoposParameters xmlns="http://br-automation.co.at/AS/Motion/AcoposParameters" >
+					<Group Descr="SKA55HS17" Remark="">
+					<Group Descr="General parameters" Remark="">
+					<Parameter ID="30" Name="Motor: Type" Value="0x0002" Unit="" Remark=""/>
+					<Parameter ID="31" Name="Motor: Software compatibility" Value="0x0201" Unit="" Remark=""/>
+					<Parameter ID="46" Name="Motor: Winding connection" Value="1" Unit="" Remark=""/>
+					<Parameter ID="47" Name="Motor: Number of pole-pairs" Value="53" Unit="" Remark=""/>
+					</Group>
+					<Group Descr="Brake parameters" Remark="">
+					<Parameter ID="42" Name="Motor holding brake: Rated current" Value="0" Unit="A" Remark=""/>
+					<Parameter ID="43" Name="Motor holding brake: Rated torque" Value="0" Unit="Nm" Remark=""/>
+					<Parameter ID="44" Name="Motor holding brake: Engaging delay" Value="0" Unit="s" Remark=""/>
+					<Parameter ID="45" Name="Motor holding brake: Release delay" Value="0" Unit="s" Remark=""/>
+					</Group>
+					<Group Descr="Thermo sensor parameters" Remark="">
+					<Parameter ID="64" Name="Temperature sensor: Parameter 1" Value="359" Unit="" Remark=""/>
+					<Parameter ID="65" Name="Temperature sensor: Parameter 2" Value="1334" Unit="" Remark=""/>
+					<Parameter ID="66" Name="Temperature sensor: Parameter 3" Value="-40" Unit="" Remark=""/>
+					<Parameter ID="67" Name="Temperature sensor: Parameter 4" Value="0.07" Unit="" Remark=""/>
+					<Parameter ID="68" Name="Temperature sensor: Parameter 5" Value="32.43" Unit="" Remark=""/>
+					<Parameter ID="69" Name="Temperature sensor: Parameter 6" Value="60.71" Unit="" Remark=""/>
+					<Parameter ID="70" Name="Temperature sensor: Parameter 7" Value="85.79" Unit="" Remark=""/>
+					<Parameter ID="71" Name="Temperature sensor: Parameter 8" Value="108.73" Unit="" Remark=""/>
+					<Parameter ID="72" Name="Temperature sensor: Parameter 9" Value="130.10" Unit="" Remark=""/>
+					<Parameter ID="73" Name="Temperature sensor: Parameter 10" Value="150" Unit="" Remark=""/>
+					<Parameter ID="75" Name="Motor: Thermal time constant (for MOTOR_COMPATIBILITY 0x0202)" Value="1800" Unit="s" Remark=""/>
+					</Group>
+					<Group Descr="Motor parameters" Remark="">
+					<Parameter ID="48" Name="Motor: Rated voltage" Value="400" Unit="V" Remark=""/>
+					<Parameter ID="49" Name="Motor: Voltage constant" Value="3164.32" Unit="mV*min" Remark=""/>
+					<Parameter ID="50" Name="Motor: Rated speed" Value="88,48" Unit="1/min" Remark=""/>
+					<Parameter ID="51" Name="Motor: Maximum speed" Value="90" Unit="1/min" Remark=""/>
+					<Parameter ID="52" Name="Motor: Stall torque" Value="321" Unit="Nm" Remark=""/>
+					<Parameter ID="53" Name="Motor: Rated torque" Value="300" Unit="Nm" Remark=""/>
+					<Parameter ID="54" Name="Motor: Peak torque" Value="990" Unit="Nm" Remark=""/>
+					<Parameter ID="55" Name="Motor: Torque constant" Value="50.5" Unit="Nm/A" Remark=""/>
+					<Parameter ID="56" Name="Motor: Stall current" Value="6.39" Unit="A" Remark=""/>
+					<Parameter ID="57" Name="Motor: Rated current" Value="6" Unit="A" Remark=""/>
+					<Parameter ID="58" Name="Motor: Peak current" Value="25.56" Unit="A" Remark=""/>
+					<Parameter ID="59" Name="Motor: Line cross section" Value="0" Unit="mm²" Remark=""/>
+					<Parameter ID="60" Name="Motor: Stator resistance" Value="4.25" Unit="Ohm" Remark=""/>
+					<Parameter ID="61" Name="Motor: Stator inductance" Value="0.0697" Unit="Henry" Remark=""/>
+					<Parameter ID="62" Name="Motor: Moment of inertia" Value="1.86" Unit="kgm²" Remark=""/>
+					<Parameter ID="63" Name="Motor: Commutation offset" Value="1e+006" Unit="rad" Remark=""/>
+					<Parameter ID="849" Name="Motor: Thermal time constant" Value="1800" Unit="s" Remark=""/>
+					</Group>
+					<Group Descr="Isolation parameters" Remark="">
+					<Parameter ID="74" Name="Motor: Limit temperature" Value="130" Unit="°C" Remark=""/>
+					</Group>
+					</Group>
+					<Group Descr="SS2" Remark="8AC120.00">
+					<Parameter ID="97" Name="Encoder1: Type" Value="ncINC" Unit="" Remark=""/>
+					<Parameter ID="109" Name="Encoder1: Encoder scaling: increments per encoder revolution" Value="1110949888" Unit="" Remark=""/>
+					</Group>
+					<Group Descr="Commutation" Remark="">
+					<Parameter ID="276" Name="Motor: Phasing: Mode" Value="0" Unit="" Remark=""/>
+					</Group>
+					<Group Descr="Interpolation" Remark="">
+					<Parameter ID="797" Name="Interpolation mode for cyclic external set value mode" Value="2" Unit="" Remark=""/>
+					<Parameter ID="357" Name="Drive synchronisation: Master cycle time" Value="800" Unit="us" Remark=""/>
+					</Group>
+					</AcoposParameters>
+				END_APM
+			END_PROGRAM
+		END_PROCESSOR
+	END_PLC
+END_PROJECT
